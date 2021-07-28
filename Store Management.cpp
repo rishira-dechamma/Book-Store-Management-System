@@ -25,7 +25,6 @@ class book
 		void show();
 		int search(char[],char[]);
 		void buy();
-		void showall();
 };
 
 void book::feed()
@@ -89,17 +88,9 @@ void book::buy()
 		cout<<"\nRequired copies not in stock."<<endl;
 }
 
-void book::showall()
-{
-    for(int i=0;i<sizeof(*stock);i++)
-		{
-			cout<<*title;
-		}
-}
 
 int main()
 {
-	book a;
 	book *b[20];
 	int i=0,r,t,choice;
 	char titlebuy[20],authorbuy[20];
@@ -110,8 +101,7 @@ int main()
 		cout<<"\t\t2. Buy book"<<endl;
 		cout<<"\t\t3. Search for a book"<<endl;
 		cout<<"\t\t4. Edit details of book"<<endl;
-		cout<<"\t\t5. Show available books"<<endl;
-		cout<<"\t\t6. Exit"<<endl;
+		cout<<"\t\t5. Exit"<<endl;
 		cout<<"\n\t\t Enter your choice"<<endl;
 		cin>>choice;
 		
@@ -181,10 +171,6 @@ int main()
 			    break;
 			    
 			case 5:
-				a.showall();
-				break;
-			    
-			case 6:
 				exit(0);
 			
 			default:
